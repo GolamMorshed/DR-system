@@ -5,6 +5,7 @@ import 'package:dr_system/screens/get_result.dart';
 import 'package:dr_system/screens/home_screen.dart';
 import 'package:dr_system/screens/patients_list.dart';
 import 'package:dr_system/screens/privacy_policy.dart';
+import 'package:dr_system/screens/profile.dart';
 import 'package:dr_system/screens/registration.dart';
 import 'package:dr_system/screens/capture_picture.dart';
 import 'package:dr_system/screens/customer_care.dart';
@@ -13,7 +14,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: "privacy_policy",
+    initialRoute: "profile",
     routes: {
       'login': (context) =>  HomeScreen(),
       'registration': (context) =>  Registration(),
@@ -25,6 +26,7 @@ void main() {
       'customer_care': (context)  => CustomerCare(),
       'forgot_password': (context)  => ForgotPassword(),
       'privacy_policy': (context)  => PrivacyPolicy(),
+      'profile': (context)  => Profile(),
 
     }
   ));
