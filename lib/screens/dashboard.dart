@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'add_patients.dart';
 import 'drawer_header.dart';
 
 
@@ -9,15 +10,36 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   var currentPage = DrawerSections.dashboard;
+
+
   @override
   Widget build(BuildContext context) {
+    var container;
+    if (currentPage == DrawerSections.dashboard) {
+      container = AddPatients();
+    }
+    // } else if (currentPage == DrawerSections.contacts) {
+    //   container = AddPatients();
+    // } else if (currentPage == DrawerSections.events) {
+    //   container = EventsPage();
+    // } else if (currentPage == DrawerSections.notes) {
+    //   container = NotesPage();
+    // } else if (currentPage == DrawerSections.settings) {
+    //   container = SettingsPage();
+    // } else if (currentPage == DrawerSections.notifications) {
+    //   container = NotificationsPage();
+    // } else if (currentPage == DrawerSections.privacy_policy) {
+    //   container = PrivacyPolicyPage();
+    // } else if (currentPage == DrawerSections.send_feedback) {
+    //   container = SendFeedbackPage();
+    // }
     return Scaffold(
       appBar: AppBar(
         title: Text('Welcome to DR System'),
       ),
       body: Container(
         child: Center(
-
+          child: Text("Dashbaord"),
         ),
       ),
       drawer: Drawer(
