@@ -27,6 +27,8 @@ class _PatientsListState extends State<PatientsList> {
     CompanyStocks(name: "yummen", price: "positive")
   ];
 
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -65,7 +67,7 @@ class _PatientsListState extends State<PatientsList> {
                         TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    trailing: Text("\ ${stocksList[index].price}"),
+                     trailing: Text("\ ${stocksList[index].price}"),
 
                   ),
                 ),

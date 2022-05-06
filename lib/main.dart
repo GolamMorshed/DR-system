@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: "profile",
+    initialRoute: "patients_list",
     routes: {
       'login': (context) =>  HomeScreen(),
       'registration': (context) =>  Registration(),

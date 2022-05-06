@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.5,
+                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.4,
                     right: 35,
                     left: 35
                 ),
@@ -93,7 +93,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontSize: 18,
                                   )),
                         ),
-                        TextButton(onPressed: (){},
+                        TextButton(onPressed: (){
+                          Navigator.pushNamed(context, 'forgot_password');
+                        },
                           child:
                           Text('Forgot Password',
                               style: TextStyle(decoration: TextDecoration.underline,

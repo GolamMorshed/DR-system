@@ -92,7 +92,9 @@ class _RegistrationState extends State<Registration> {
                           backgroundColor: Color(0xff4c505b),
                           child: IconButton(
                             color: Colors.white,
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.pushNamed(context, 'dashboard');
+                            },
                             icon: Icon(Icons.arrow_forward),
                           ),
                         ),
@@ -105,7 +107,7 @@ class _RegistrationState extends State<Registration> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(onPressed: (){
-                          Navigator.pushNamed(context, 'registration');
+                          Navigator.pushNamed(context, 'login');
                         },
                           child:
                           Text('Sign In',
@@ -114,7 +116,7 @@ class _RegistrationState extends State<Registration> {
                               )),
                         ),
                         TextButton(onPressed: (){
-                          Navigator.pushNamed(context, 'login');
+                          Navigator.pushNamed(context, 'forgot_password');
                         },
                           child:
                           Text('Forgot Password',
