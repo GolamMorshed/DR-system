@@ -15,8 +15,17 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
           )
       ),
       child: Scaffold(
-        //backgroundColor: Colors.transparent,
-        body: Stack(
+          appBar: AppBar(
+            title: Text("Privacy And Policy"),
+            leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: (){
+              Navigator.pushNamed(context, 'dashboard');
+              },
+            ),
+          ),
+
+
+    body: Stack(
           children: [
             Container(
               padding: EdgeInsets.only(left: 35, top: 140),

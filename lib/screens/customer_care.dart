@@ -15,11 +15,20 @@ class _CustomerCareState extends State<CustomerCare> {
           )
       ),
       child: Scaffold(
-        //backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: Text("Customer Care"),
+          leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: (){
+              Navigator.pushNamed(context, 'dashboard');
+            },
+          ),
+        ),
+
         body: Stack(
+
           children: [
             Container(
-              padding: EdgeInsets.only(left: 35, top: 240),
+              padding: EdgeInsets.only(left: 35, top: 100),
               child: Text("Please write down your issue\nWe will contact you asap.", style: TextStyle(
                 color: Colors.black,
                 fontSize: 25,
@@ -28,7 +37,7 @@ class _CustomerCareState extends State<CustomerCare> {
             ),
             SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.4,
+                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.2,
                     right: 35,
                     left: 35
                 ),

@@ -16,10 +16,17 @@ class _ProfileState extends State<Profile> {
       ),
       child: Scaffold(
         //backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: (){
+              Navigator.pushNamed(context, 'dashboard');
+            },),
+          title: Text("Setting"),
+        ),
         body: Stack(
           children: [
             Container(
-              padding: EdgeInsets.only(left: 35, top: 140),
+              padding: EdgeInsets.only(left: 35, top: 100),
               child: Text("Edit Profile", style: TextStyle(
                 color: Colors.black,
                 fontSize: 35,
@@ -28,7 +35,7 @@ class _ProfileState extends State<Profile> {
             ),
             SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.3,
+                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.2,
                     right: 35,
                     left: 35
                 ),

@@ -38,15 +38,45 @@ class _DashboardState extends State<Dashboard> {
         title: Text('Welcome to DR System'),
       ),
       body: Container(
-        child: Center(
-          child: Text("Dashbaord"),
+        child: Column(
+          children: [
+            //padding: EdgeInsets.left(16.0),
+            Column(
+              children: [
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, 'add_patients');
+                }, child: Text("              Add Patient              ", style: TextStyle(fontSize: 30, color: Colors.white),)),
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, 'patients_list');
+                }, child: Text("              Patient List                      ",style: TextStyle(fontSize: 30, color: Colors.white))),
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, 'profile');
+                }, child: Text("                 Setting                            ",style: TextStyle(fontSize: 30, color: Colors.white))),
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, 'customer_care');
+                }, child: Text("           Customer Care               ",style: TextStyle(fontSize: 30, color: Colors.white))),
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, 'privacy_policy');
+                }, child: Text("        Privacy And Policy               ",style: TextStyle(fontSize: 30, color: Colors.white))),
+                ElevatedButton(onPressed: (){
+                  Navigator.pushNamed(context, 'login');
+                }, child: Text("                 Logout                     ",style: TextStyle(fontSize: 30, color: Colors.white))),
+              ],
+            ),
+          ],
         ),
       ),
+      // body: Container(
+      //   child: Center(
+      //     child: Text("Dashbaord"),
+      //   ),
+      // ),
       drawer: Drawer(
         child: SingleChildScrollView(
           child: Container(
             child: Column(
               children: [
+
                 MyHeaderDrawer(),
                 MyDrawerItems(),
               ],

@@ -34,6 +34,10 @@ class _PatientsListState extends State<PatientsList> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(icon: Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.pushNamed(context, 'dashboard');
+          },),
           title: Text("List of Patients"),
         ),
         body: ListView.builder(
